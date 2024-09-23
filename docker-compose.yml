@@ -5,14 +5,14 @@ services:
     image: "rabbitmq:3-management"
     container_name: "rabbitmq"
     ports:
-      - "15672:15672"  # Panel de administración de RabbitMQ
-      - "5672:5672"    # Puerto para comunicación con los productores/consumidores
+      - "15672:15672"  
+      - "5672:5672"    
     environment:
       RABBITMQ_DEFAULT_USER: user
       RABBITMQ_DEFAULT_PASS: password
 
   producer:
-    build: ./producer  # Directorio del productor
+    build: ./producer 
     depends_on:
       - rabbitmq
     environment:
@@ -20,7 +20,7 @@ services:
       RABBITMQ_PORT: 5672
 
   consumer:
-    build: ./consumer  # Directorio del consumidor
+    build: ./consumer  
     depends_on:
       - rabbitmq
     environment:
