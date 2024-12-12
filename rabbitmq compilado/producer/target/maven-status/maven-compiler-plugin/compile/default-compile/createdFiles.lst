@@ -1,0 +1,3 @@
+com\rabbitmq\producer\ProducerApp.class
+com\rabbitmq\producer\ProducerApp$ProducerService.class
+com\rabbitmq\producer\ProducerApp$ProducerController.class
